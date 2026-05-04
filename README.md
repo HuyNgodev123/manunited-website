@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-npm run dev
+pnpm run dev
 # or
 yarn dev
 # or
@@ -74,7 +74,7 @@ Website chính thức về lịch sử, video store và xu hướng TikTok của
 
 ```bash
 Node.js: >= 16.0.0
-npm: >= 8.0.0 (hoặc yarn, pnpm)
+pnpm: >= 8.0.0 (hoặc yarn, ppnpm)
 ```
 
 ---
@@ -89,20 +89,20 @@ cd manunited-website
 
 ### 2. Cài Dependencies
 ```bash
-npm install
+pnpm install
 ```
 
 ### 3. Chạy Dev Server
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Truy cập: **http://localhost:3000**
 
 ### 4. Build Production
 ```bash
-npm run build
-npm start
+pnpm run build
+pnpm start
 ```
 
 ---
@@ -166,16 +166,16 @@ manunited-website/
 
 ```bash
 # Dev mode (auto reload)
-npm run dev
+pnpm run dev
 
 # Build production
-npm run build
+pnpm run build
 
 # Start production server
-npm start
+pnpm start
 
 # Lint code
-npm run lint
+pnpm run lint
 ```
 
 ### Thêm Page Mới
@@ -726,7 +726,7 @@ git push heroku main
 **Sửa:**
 ```bash
 rm -rf .next
-npm run dev
+pnpm run dev
 ```
 
 ### Lỗi: Image không hiển thị
