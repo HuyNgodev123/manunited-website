@@ -3,21 +3,8 @@
 
 import { motion } from 'framer-motion';
 import { FaHeart, FaComment, FaShare } from 'react-icons/fa';
+import { Trend, TrendCardProps } from '@/types';
 
-interface Trend {
-  id: number;
-  title: string;
-  views: string;
-  likes: string;
-  creator: string;
-}
-
-interface TrendCardProps {
-  trend: Trend;
-  isSelected: boolean;
-  onSelect: () => void;
-  index: number;
-}
 
 export default function TrendCard({
   trend,

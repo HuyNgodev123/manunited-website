@@ -3,18 +3,8 @@
 import { motion } from 'framer-motion';
 import NavLink from '../share/NavLink';
 import { FaHeart, FaComment, FaShare } from 'react-icons/fa';
+import { Trend, TrendPlayerProps } from '@/types';
 
-interface Trend {
-  id: number;
-  title: string;
-  views: string;
-  likes: string;
-  creator: string;
-}
-
-interface TrendPlayerProps {
-  trend: Trend;
-}
 
 export default function TrendPlayer({ trend }: TrendPlayerProps) {
   return (

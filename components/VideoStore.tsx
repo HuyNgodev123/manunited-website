@@ -5,8 +5,9 @@
 import { useState } from 'react';
 import AnimatedSection from '../share/AnimatedSection';
 import { animationDelays } from '@/config';
+import { Video } from '@/types';
 
-const videos = [
+const videos : Video[] = [
   {
     id: 1,
     title: 'Music of Manchester United',

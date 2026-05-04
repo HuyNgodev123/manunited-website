@@ -1,8 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Milestone } from '@/types'
+import AnimatedSection from '../share/AnimatedSection';
 
-const milestones = [
+const milestones : Milestone[] = [
   {
     year: 1878,
     title: 'Thành Lập',
@@ -41,19 +43,14 @@ export default function HistoryPage() {
     <main className="min-h-screen bg-gray-900 py-16">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <AnimatedSection variant="slideUp" className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-red-600 mb-4">
             Lịch Sử Manchester United
           </h1>
           <p className="text-xl text-gray-300">
             146 năm vinh quang từ 1878 đến nay
           </p>
-        </motion.div>
+        </AnimatedSection>
 
         {/* Timeline */}
         <div className="space-y-8">
@@ -89,12 +86,7 @@ export default function HistoryPage() {
         </div>
 
         {/* Statistics */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="grid md:grid-cols-4 gap-6 mt-16 pt-16 border-t border-gray-700"
-        >
+        <AnimatedSection variant="slideUp" className="grid md:grid-cols-4 gap-6 mt-16 pt-16 border-t border-gray-700">
           {[
             { number: '20+', label: 'Cúp Quốc Gia' },
             { number: '13', label: 'Premier League' },
@@ -112,7 +104,7 @@ export default function HistoryPage() {
               <p className="text-gray-300">{stat.label}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </AnimatedSection>
       </div>
     </main>
   );
