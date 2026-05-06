@@ -1,9 +1,38 @@
+import { BaseEntity } from './common';
+
+
+
+export enum SIGNIFICANCE {
+  MAJOR = 'major',
+  MINOR = 'minor'
+}
+
+export enum POSITION {
+  GK = 'gk',
+  DEF = 'def',
+  MID = 'mid',
+  FWD = 'fwd'
+}
+
+export enum COMPETITION {
+  LEAGUE = 'League',
+  CUP = 'Cup',
+  EUROPEAN = 'European'
+}
+
+export enum RESULT {
+  WIN = 'win',
+  DRAW = 'draw',
+  LOSS = 'loss'
+}
+
+
 export interface Milestone {
   year: number;
   title: string;
   description: string;
   image?: string;
-  significance?: 'major' | 'minor';
+  significance?: SIGNIFICANCE;
 }
 
 export interface TeamStatistics {
@@ -31,7 +60,7 @@ export interface Era {
 export interface Player {
   id: number;
   name: string;
-  position: 'GK' | 'DEF' | 'MID' | 'FWD';
+  position: POSITION;
   number: number;
   joinedYear: number;
   leftYear?: number;
@@ -41,15 +70,14 @@ export interface Player {
   nationality: string;
 }
 
-export interface Match {
-  id: number;
+export interface Match extends BaseEntity {
   date: Date;
   opponent: string;
   homeTeam: string;
   awayTeam: string;
   score: string; // e.g., "2-1"
-  competition: 'League' | 'Cup' | 'European';
-  result: 'win' | 'draw' | 'loss';
+  competition: COMPETITION;
+  result: RESULT;
   notable?: boolean; // Is it a memorable match?
 }
 

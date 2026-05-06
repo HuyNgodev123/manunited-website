@@ -59,6 +59,11 @@ export const hoverAnimations = {
     transition: { duration: 0.3 },
   },
 
+  right: {
+    whileHover: { x: 5 },
+    transition: { duration: 0.3 },
+  },
+  
   grow: {
     whileHover: { scale: 1.1 },
     transition: { duration: 0.3 },

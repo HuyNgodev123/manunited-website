@@ -1,12 +1,18 @@
-export interface Video {
-  id: number;
+import { BaseNamedEntity } from './common';
+
+export enum VIDEOCATEGORY {
+  GOALS = 'goals',
+  HIGHLIGHTS = 'highlights',
+  SAVES = 'saves',
+  MOMENTS = 'moments'
+}
+
+export interface Video extends BaseNamedEntity {
   title: string;
   youtubeId: string;
   thumbnail?: string;
-  description?: string;
   duration?: number; // in seconds
-  category?: 'goals' | 'highlights' | 'saves' | 'moments';
-  uploadedAt?: Date;
+  category?: VIDEOCATEGORY;
 }
 
 export interface VideoPlayer {
@@ -28,5 +34,5 @@ export interface VideoPlaylist {
 export interface VideoStats {
   totalVideos: number;
   totalViews: number;
-  categories: Record<string, number>;
+  categories: Record<VIDEOCATEGORY, number>;
 }

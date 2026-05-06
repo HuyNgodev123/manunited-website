@@ -1,7 +1,11 @@
-// lib/api.ts
-import { ApiResponse, Video } from '@/types';
+import { TrendResponseSchema, TrendFilter} from '@/schemas/trend.schema';
 
-export async function fetchVideos(): Promise<ApiResponse<Video[]>> {
-  const response = await fetch('/api/videos');
-  return response.json();
+export async function fetchTrends(filter?: TrendFilter) {
+  const response = await fetch('/api/trends');
+  const data = await response.json();
+  
+  // Validate response data
+  const validatedData = TrendResponseSchema.parse(data);
+  
+  return validatedData;
 }

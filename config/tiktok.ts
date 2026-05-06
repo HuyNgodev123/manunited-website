@@ -1,5 +1,7 @@
+import { TrendSchema } from '@/schemas/trend.schema';
+import { Trend } from '@/types';
 
-export const tiktokTrends = [
+export const tiktokTrendsRaw  = [
   {
     id: 1,
     title: '#ManUnited Best Goals',
@@ -33,6 +35,10 @@ export const tiktokTrends = [
     tiktokId: '7181234567890123459',
   },
 ];
+
+export const tiktokTrends: Trend[] = tiktokTrendsRaw.map(trend => 
+  TrendSchema.parse(trend) as Trend
+);
 
 export const tiktokCtaText = {
   title: 'Tạo Xu Hướng Của Riêng Bạn',

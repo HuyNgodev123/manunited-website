@@ -7,7 +7,6 @@ import TrendCard from '@/components/TrendCard';
 import TrendPlayer from '@/components/TrendPlayer';
 import NavLink from '../share/NavLink';
 import { tiktokTrends, tiktokCtaText, animationDelays } from '@/config';
-
 export default function TikTokTrendsPage() {
   const [selectedTrend, setSelectedTrend] = useState(tiktokTrends[0]);
 
