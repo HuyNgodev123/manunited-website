@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { CATEGORY, SORT_BY } from '@/types/trend';
+import { CATEGORY, SORT_BY } from '@/types/interfaces/trend';
 import { BaseEntitySchema, PaginationSchema, FilterOptionsSchema } from './common.schema';
 
 // ===== ENUMS SCHEMA =====

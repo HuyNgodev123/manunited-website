@@ -1,34 +1,5 @@
-import { BaseEntity, BaseResponse, BaseComponentProps } from './common';
-
-
-export enum CATEGORY {
-  GOALS  = 'goals',
-  DANCES = 'dances',
-  MOMENTS = 'moments',
-  CHALLENGES = '131'
-}
-
-export enum SORT_BY {
-  TRENDING  = 'trending',
-  VIEWS = 'views',
-  LIKES = 'likes',
-  RECENT = 'recent'
-}
-
-// ===== LABELS (Reuse) =====
-export const CATEGORY_LABELS: Record<CATEGORY, string> = {
-  [CATEGORY.GOALS]: '🎯 Goals',
-  [CATEGORY.DANCES]: '💃 Dances',
-  [CATEGORY.MOMENTS]: '✨ Moments',
-  [CATEGORY.CHALLENGES]: '🎪 Challenges',
-};
- 
-export const SORT_BY_LABELS: Record<SORT_BY, string> = {
-  [SORT_BY.TRENDING]: 'Trending',
-  [SORT_BY.VIEWS]: 'Views',
-  [SORT_BY.LIKES]: 'Likes',
-  [SORT_BY.RECENT]: 'Recent',
-};
+import { BaseEntity, BaseResponse, BaseComponentProps } from '../common';
+import { CATEGORY, SORT_BY } from '../enums';
 
 export interface Trend extends BaseEntity {
   title: string;

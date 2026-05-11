@@ -1,8 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { TrendCardProps } from '@/types/trend';
-import { CATEGORY_LABELS } from '@/types/trend';
+import { TrendCardProps, CATEGORY_LABELS } from '@/types';
 import { hoverAnimations, animationDelays } from '@/config';
 import AnimatedSection from '../share/AnimatedSection';
 

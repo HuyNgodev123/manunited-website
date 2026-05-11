@@ -1,13 +1,7 @@
-import { BaseNamedEntity } from './common';
+import { BaseEntity } from '../common';
+import { VIDEOCATEGORY } from '../enums';
 
-export enum VIDEOCATEGORY {
-  GOALS = 'goals',
-  HIGHLIGHTS = 'highlights',
-  SAVES = 'saves',
-  MOMENTS = 'moments'
-}
-
-export interface Video extends BaseNamedEntity {
+export interface Video extends BaseEntity {
   title: string;
   youtubeId: string;
   thumbnail?: string;

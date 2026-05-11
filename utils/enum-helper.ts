@@ -1,12 +1,11 @@
-// utils/enum-helper.ts
-import { Category } from '@/types/trend';
+import { CATEGORY } from '@/types';
 
-export function getCategoryLabel(category: Category): string {
-  const labels: Record<Category, string> = {
-    [Category.Goals]: '🎯 Goals',
-    [Category.Dances]: '💃 Dances',
-    [Category.Moments]: '✨ Moments',
-    [Category.Challenges]: '🎪 Challenges',
+export function getCategoryLabel(category: CATEGORY): string {
+  const labels: Record<CATEGORY, string> = {
+    [CATEGORY.GOALS]: '🎯 Goals',
+    [CATEGORY.DANCES]: '💃 Dances',
+    [CATEGORY.MOMENTS]: '✨ Moments',
+    [CATEGORY.CHALLENGES]: '🎪 Challenges',
   };
   return labels[category];
 }
